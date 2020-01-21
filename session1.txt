@@ -1,0 +1,42 @@
+#pip install flask_restful
+
+Service.py:-
+
+from flask_restful import Resource
+
+class Service(Resource):
+	def get(self):
+		return "GET"
+
+
+--------------------------------------------------
+
+__init__.py:-
+
+
+from flask_restful import Api
+from Service import Service
+from app import app
+
+server=Api(app)
+server.add_resource(Service, "/serviceurl")
+
+--------------------------------------------------
+
+app.py:-
+
+
+from flask import Flask, render_template
+
+app=Flask(__name__)
+
+@app.route("/")
+def index():
+	return "Welcome"
+
+if __name__=="__main__":
+	from __init__ import *
+	app.run(debug=True)
+
+
+--------------------------------------------------
