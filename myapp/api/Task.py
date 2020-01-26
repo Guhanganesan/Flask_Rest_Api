@@ -12,7 +12,7 @@ db=mysql.connect(host="localhost",
                  )
 cursor=db.cursor()
 
-#pip install mysql-connector 
+#pip install mysql-connector-python 
 
 class Task(Resource):
     def get(self):
