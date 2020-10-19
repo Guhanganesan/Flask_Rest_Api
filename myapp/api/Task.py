@@ -5,9 +5,9 @@ import mysql.connector as mysql
 from flask import request
 import json
 
-db=mysql.connect(host="localhost",
+db=mysql.connect(host="localhost",      
                  user="root",
-                 password="1234",
+                 password="",
                  database="mydb"
                  )
 cursor=db.cursor()
@@ -46,8 +46,9 @@ class Task(Resource):
         
     def delete(self):
         logger.debug("Inside delete method")
-        res=request.args.get("id") 
-        sql = "delete from student where id='{0}'".format(res)
+        res=request.json
+        print("Res is ", res)
+        sql = "delete from student where id='{0}'".format(res["id"])
         cursor.execute(sql)
         db.commit()
         return {"message":"Successfully deleted"},200

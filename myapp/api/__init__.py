@@ -5,7 +5,3 @@ from app import app
 
 restServer=Api(app)
 restServer.add_resource(Task,"/api/v1.0/task")
-
-
-
-
