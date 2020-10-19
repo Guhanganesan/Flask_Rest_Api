@@ -1,5 +1,5 @@
 from flask_restful import Api
-from .service import Service
+from .Service import Service
 from app import app 
 #import app instance from app.py
 

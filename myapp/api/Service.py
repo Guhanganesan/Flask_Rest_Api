@@ -14,7 +14,7 @@ cursor=db.cursor()
 
 #pip install mysql-connector-python 
 
-class Task(Resource):
+class Service(Resource):
     def get(self):
         res=request.args.get("id")
         if res:
