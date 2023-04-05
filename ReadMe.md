@@ -1,7 +1,23 @@
 # Create a main app file app.py inside the myapp folder and add necessary steps to run flask app
 
 # Install flask restful follow the below commands
-=> pip install flask_restful
+
+1. pip install flask_restful
+
+# MySQL Connector
+
+1. pip install mysql-connector-python
+
+# MySQL Queries
+
+1. create database country;
+2. use country;
+3. create table student( id int auto_increment, name varchar(100), email varchar(100), pass varchar(100), primary key(id));
+2. Further query details => https://github.com/Guhanganesan/MySQL
+
+# Flask CORS
+
+1. pip install -U flask-cors
 
 # Create a Service using this service.py module inside api folder
 
@@ -46,6 +62,23 @@ Open your command prompt follow the steps to install virtualenv and flask to run
 16. Check in your browser: http://127.0.0.1:5000/
 
 To Change IP Address: python -m flask run --host=172.16.3.64
+
+# This app is running like
+
+1. Get all => http://127.0.0.1:5000/api/v1.0/task
+2. Get by id => http://127.0.0.1:5000/api/v1.0/task
+3. Add (POST) by using  body = {
+    "name":"anbu",
+    "email":"anbu@gmail.com",
+    "pass":1234
+} 
+
+with same url (1)
+
+
+
+
+
 
 
 

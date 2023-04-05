@@ -8,7 +8,7 @@ import json
 db=mysql.connect(host="localhost",      
                  user="root",
                  password="",
-                 database="mydb"
+                 database="country"
                  )
 cursor=db.cursor()
 
