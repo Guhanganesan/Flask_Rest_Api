@@ -46,9 +46,8 @@ class Service(Resource):
         
     def delete(self):
         logger.debug("Inside delete method")
-        res=request.json
-        print("Res is ", res)
-        sql = "delete from student where id='{0}'".format(res["id"])
+        id=request.args.get("id")
+        sql = "delete from student where id='{0}'".format(id)
         cursor.execute(sql)
         db.commit()
         return {"message":"Successfully deleted"},200
